@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản lý Nhà hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Restaurant Manager</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#dashboard" class="nav-link active" data-module="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Tổng quan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nhahang" class="nav-link" data-module="nhahang">
+                            <i class="fas fa-building"></i>
+                            <span>Nhà hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nhanvien" class="nav-link" data-module="nhanvien">
+                            <i class="fas fa-users"></i>
+                            <span>Nhân viên</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#banan" class="nav-link" data-module="banan">
+                            <i class="fas fa-chair"></i>
+                            <span>Bàn ăn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#khachhang" class="nav-link" data-module="khachhang">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Khách hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#thucdon" class="nav-link" data-module="thucdon">
+                            <i class="fas fa-utensils"></i>
+                            <span>Thực đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hoadon" class="nav-link" data-module="hoadon">
+                            <i class="fas fa-receipt"></i>
+                            <span>Hóa đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chitiethoadon" class="nav-link" data-module="chitiethoadon">
+                            <i class="fas fa-list-alt"></i>
+                            <span>Chi tiết Hóa đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#danhgia" class="nav-link" data-module="danhgia">
+                            <i class="fas fa-star"></i>
+                            <span>Đánh giá</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Tổng quan</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-menu">
+                        <span class="user-name">Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area" id="main-content">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Global Modal Container -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
