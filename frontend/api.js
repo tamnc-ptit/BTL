@@ -17,7 +17,7 @@ export const api = {
 
     getById: async (endpoint, id) => {
         try {
-            const encodedId = encodeURIComponent(id);
+             const encodedId = encodeURIComponent(id);
             const res = await fetch(`${API_BASE}${endpoint}${encodedId}`);
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
